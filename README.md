@@ -9,9 +9,9 @@ A small library providing convenient methods to call a JSON-style REST API.
 
 ## Usage
 
-  var rest = require('qmerce-rest')
-      api = rest(URL, { user: USER, password: PASSWORD });
-
+  const rest = require('qmerce-rest')
+  const api = rest(URL, { user: USER, password: PASSWORD });
+  
   api.getAsync()
   .then((data) {
      data.counter++;
