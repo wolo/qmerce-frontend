@@ -31,7 +31,7 @@ module.exports = function(apiUrl, basicAuth) {
 		getAllShippingMethods: () => server.getAsync("/shipment").then((data) => data.shippingMethods),
 		validateCartAddress: (address) => server.postAsync("/validate/cartAddress", address),
 		validateCustomerAddress: (address) => server.postAsync("/validate/customerAddress", address),
-		completeAddress: (address) => server.postAsync("/api/service/addressCompletion", address),
+		completeAddress: (address) => server.postAsync("/service/addressCompletion", address),
 		
 		createCustomer: (data) => server.postAsync("/customer", data).then(newCustomer)
 	}
