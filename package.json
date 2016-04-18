@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/wolo/qmerce-frontend#readme",
   "dependencies": {
-    "qmerce-rest": "*",
+    "qmerce-rest": "https://github.com/wolo/qmerce-rest.git",
     "querystring": "*"
   },
   "devDependencies": {
