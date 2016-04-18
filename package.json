@@ -1,0 +1,27 @@
+{
+  "name": "qmerce-frontend",
+  "version": "0.1.0",
+  "description": "Qmerce Frontend API",
+  "main": "frontend.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wolo/qmerce-frontend.git"
+  },
+  "keywords": [
+    "qmerce"
+  ],
+  "author": "Wolfgang Loch <wolo@wolosoft.com> (http://www.wolosoft.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wolo/qmerce-frontend/issues"
+  },
+  "homepage": "https://github.com/wolo/qmerce-frontend#readme",
+  "dependencies": {
+    "qmerce-rest": "*",
+    "querystring": "*"
+  },
+  "devDependencies": {
+  }
+}
