@@ -1,9 +1,10 @@
 {
   "name": "qmerce-frontend",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Qmerce Frontend API",
   "main": "frontend.js",
   "scripts": {
+    "test": "mocha --reporter spec test/index.js"
   },
   "repository": {
     "type": "git",
@@ -19,9 +20,11 @@
   },
   "homepage": "https://github.com/wolo/qmerce-frontend#readme",
   "dependencies": {
-    "qmerce-rest": "https://github.com/wolo/qmerce-rest.git",
+    "qmerce-rest": "^0.1.1",
     "querystring": "*"
   },
   "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5"
   }
 }

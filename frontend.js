@@ -3,6 +3,7 @@ const Cart = require("./cart.js");
 const Customer = require("./customer.js");
 const Order = require("./order.js");
 const Product = require("./product.js");
+const ProductAttribute = require("./productAttribute.js");
 
 module.exports = function(apiUrl, basicAuth) {
 	const server = JsonRestApi(apiUrl, basicAuth);
@@ -28,10 +29,16 @@ module.exports = function(apiUrl, basicAuth) {
 		customer: (id) => new Customer(id, server),
 		order: (id) => new Order(id, server),
 		product: (id) => new Product(id, server),
+		productAttribute: (id) => new ProductAttribute(id, server),
+		
 		getAllShippingMethods: () => server.getAsync("/shipment").then((data) => data.shippingMethods),
+		getAllProductAttributes: () => server.getAsync("/productAttributes").then((data) => data.attributes),
+
 		validateCartAddress: (address) => server.postAsync("/validate/cartAddress", address),
 		validateCustomerAddress: (address) => server.postAsync("/validate/customerAddress", address),
 		completeAddress: (address) => server.postAsync("/service/addressCompletion", address),
+		
+		getServiceStatus: () =>server.getAsync("/service/status"),
 		
 		createCustomer: (data) => server.postAsync("/customer", data).then(newCustomer)
 	}
